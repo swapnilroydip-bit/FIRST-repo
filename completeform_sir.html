@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Form Tags</title>
+  </head>
+  <body>
+    <h1>Student Registration Form</h1>
+    <form action="">
+      <!-- Fieldset for grouping -->
+      <fieldset>
+        <legend>Personal Information</legend>
+        <!-- Text Input -->
+        <label for="fname">First Name</label>
+        <input
+          type="text"
+          id="fname"
+          name="firstName"
+          placeholder="Enter Your First Name"
+        />
+        <br />
+        <label for="lname">Last Name</label>
+        <input
+          type="text"
+          id="lname"
+          name="lasttName"
+          placeholder="Enter Your Last Name"
+        />
+        <br />
+        <!-- Email with pattern (regx -> regular expression) -->
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="userEmail"
+          placeholder="Enter Your Email"
+          required
+          pattern="[a-z0-9]"
+        />
+        <br />
+        <!-- Number Input -->
+        <label for="num">Number:</label>
+        <input
+          type="number"
+          id="num"
+          name="contactNo"
+          placeholder="Enter Your Phone Number"
+          required
+        />
+        <br />
+        <!-- Date Input -->
+        <label for="birthDate">Birth Date:</label>
+        <input
+          type="date"
+          id="birthDate"
+          name="dateOfBirth"
+          placeholder="Select Your DOB"
+          required
+        />
+        <br />
+      </fieldset>
+      <fieldset>
+        <legend>Course Details</legend>
+
+        <!-- Dropdown (Select) -->
+        <label for="course">Select Course:</label>
+        <select name="course" id="course">
+          <option value="">--Choose Course--</option>
+          <option value="html&css">HTML & CSS</option>
+          <option value="javascript">JavaScript</option>
+          <option value="php">PHP</option>
+          <option value="react js">Rect JS</option>
+        </select>
+        <br />
+
+        <!-- Radio Buttons -->
+        <label>Batch Timing:</label><br />
+        <input
+          type="radio"
+          name="timing"
+          id="morning"
+          value="morning"
+          checked
+        />
+        <label for="morning">Morning(10 AM - 1 PM)</label><br />
+        <input
+          type="radio"
+          name="timing"
+          id="afternoon"
+          value="morning"
+          checked
+        />
+        <label for="afternoon">Afternoon(1.30 PM - 4 PM)</label><br />
+        <input
+          type="radio"
+          name="timing"
+          id="evening"
+          value="evening"
+          checked
+        />
+        <label for="evening">Evening(6 PM - 8 PM)</label><br />
+
+        <!-- Checkboxs -->
+        <label>Additional Skills (Optional)</label><br />
+        <input type="checkbox" name="skills" id="git" />
+        <label for="git">Git & GitHub</label>
+        <br />
+        <input type="checkbox" name="skills" id="design" />
+        <label for="design">UI/UX Design</label>
+        <br />
+        <input type="checkbox" name="skills" id="db" />
+        <label for="db">Database Management</label>
+      </fieldset>
+      <!-- Textarea -->
+      <fieldset>
+        <legend>Additional Information</legend>
+
+        <label for="address">Address:</label><br />
+        <textarea
+          rows="5"
+          cols="50"
+          name="address"
+          id="address"
+          placeholder="Enter Your Complete Address"
+        ></textarea>
+        <br />
+
+        <!-- File Upload -->
+        <label for="photo">Upload Photo</label>
+        <input type="file" id="photo" name="photo" accept="image/*" />
+        <br />
+        <!-- Range Slider -->
+        <label for="confidence">Confidence Label</label>
+        <input type="range" min="1" max="10" value="8" />
+        <br />
+
+        <!-- Color Picker -->
+        <label for="favColor">Favourite Color</label>
+        <input type="color" value="#ffffff" />
+
+        <!-- Hidden Field -->
+        <input type="hidden" />
+      </fieldset>
+
+      <!-- Submit & Reset -->
+      <input type="submit" value="Register Now" />
+      <input type="reset" value="Clear Form" />
+      <button type="submit">Register Now</button>
+      <button type="button" onclick="alert('Form Preview')">Preview</button>
+    </form>
+  </body>
+</html>
